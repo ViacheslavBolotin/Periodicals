@@ -2,6 +2,7 @@ package com.epam.bolotin.periodicals.controller.command.admin;
 
 import com.epam.bolotin.periodicals.controller.PagePath;
 import com.epam.bolotin.periodicals.controller.command.Command;
+import com.epam.bolotin.periodicals.controller.util.RequestUtils;
 import com.epam.bolotin.periodicals.model.db.entity.User;
 import com.epam.bolotin.periodicals.model.service.AppServices;
 import com.epam.bolotin.periodicals.model.service.UserService;
@@ -26,6 +27,7 @@ public class ShowUserListCommand implements Command {
             user.setUserRoleId(user.getUserRoleId());
             fullUser.add(user);
         }
+        request.setAttribute("errorMessage", RequestUtils.getStringParameter(request,"errorMessage"));
         request.setAttribute("fullUser", fullUser);
 
         return PagePath.PAGE_USER_LIST;

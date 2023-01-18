@@ -2,6 +2,7 @@ package com.epam.bolotin.periodicals.controller.command.login;
 
 import com.epam.bolotin.periodicals.controller.PagePath;
 import com.epam.bolotin.periodicals.controller.command.Command;
+import com.epam.bolotin.periodicals.controller.util.RequestUtils;
 import com.epam.bolotin.periodicals.model.db.entity.User;
 import com.epam.bolotin.periodicals.model.db.entity.UserRole;
 import com.epam.bolotin.periodicals.model.service.AppServices;
@@ -25,20 +26,31 @@ public class RegistrationCommand implements Command {
 
         UserService userService = AppServices.getInstance().getUserService();
         String resp;
+        String errorMessage = "";
 
         User user = new User();
         try {
 
             if (userService.validateAndFillUser(user, request)) {
 
-                user.setUserRoleId(2);
-                user.setBlocked(false);
-                userService.save(user);
+                if (userService.findByName(RequestUtils.getStringParameter(request, "login")).getId() == 0) {
+
+                    user.setUserRoleId(2);
+                    user.setBlocked(false);
+                    userService.save(user);
+                    LOG.debug("New user added");
+                } else {
+
+                    errorMessage = "Unable to register a new user. A user with the same name already exists in the system!";
+                    request.setAttribute("errorMessage", errorMessage);
+                    LOG.info("Unable to register a new user. A user with the same name already exists in the system!");
+                }
 
                 String page = request.getParameter("page").trim();
-                resp = (page.equals("users")) ? PagePath.COMMAND_SHOW_USERS : PagePath.COMMAND_LOGIN+"&main_menu=1";
+                resp = (page.equals("users")) ? PagePath.COMMAND_SHOW_USERS+"&errorMessage="+errorMessage :
+                        PagePath.COMMAND_LOGIN+"&main_menu=1"+"&errorMessage="+errorMessage;
 
-                LOG.debug("New user added");
+
             } else {
                 resp = PagePath.COMMAND_NEW_USER;
                 LOG.debug("New user cannot added");

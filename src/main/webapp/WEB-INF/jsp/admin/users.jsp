@@ -8,7 +8,14 @@
 <body>
 <jsp:include page="/WEB-INF/templates/_menu_admin.jsp"></jsp:include>
 <div class="container">
-<%-- Абоненты--%>
+
+<div>
+<c:if test="${not empty errorMessage}">
+                    <h5 style="color:#ff0000"> ${errorMessage}</h5>
+</c:if>
+</div>
+
+<%-- Список користувачів--%>
 <div class="tab-pane fade show active" id="v-pills-users" role="tabpanel"
      aria-labelledby="v-pills-users-tab">
     <ul class="nav nav-tabs" id="usersTab" role="tablist">

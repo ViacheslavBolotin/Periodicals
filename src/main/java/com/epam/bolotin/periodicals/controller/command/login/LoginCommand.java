@@ -24,7 +24,10 @@ public class LoginCommand implements Command {
 
         int mainMenu = RequestUtils.getIntParameter(request,"main_menu");
 
-        if (mainMenu == 1) {return PagePath.PAGE_LOGIN;}
+        if (mainMenu == 1) {
+            request.setAttribute("errorMessage", RequestUtils.getStringParameter(request,"errorMessage"));
+            return PagePath.PAGE_LOGIN;
+        }
 
         HttpSession session = request.getSession();
         String userName = RequestUtils.getStringParameter(request,"user_name");
