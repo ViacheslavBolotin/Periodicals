@@ -117,6 +117,6 @@ public class AccountRepositoryMySql implements AccountRepository {
 
     @Override
     public Connection debitedFromAccount(long userId, BigDecimal sum) throws DBException {
-        return this.queryExecuter.executeTransactionStart(instance, DEBITED_FROM_ACCOUNT, sum, userId);
+        return queryExecuter.executeTransactionStart(instance, DEBITED_FROM_ACCOUNT, sum, userId);
     }
 }
