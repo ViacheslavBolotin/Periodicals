@@ -18,7 +18,8 @@ public class EditUserCommand implements Command {
     public String execute(HttpServletRequest request, HttpServletResponse response) {
 
         String forward;
-        User user = (User) request.getSession().getAttribute("user");
+        HttpSession session = request.getSession();
+        User user = (User) session.getAttribute("user");
 
         if (user == null) {
             return PagePath.PAGE_ERROR;

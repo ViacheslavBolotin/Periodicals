@@ -17,7 +17,7 @@ import javax.servlet.http.HttpSession;
  * @date: 16.01.2023
  */
 public class SubscribePublicationCommand implements Command {
-
+    private PublicationService publicationService = AppServices.getInstance().getPublicationService();
     private static final Logger LOG = Logger.getLogger(SubscribePublicationCommand.class);
 
     @Override
@@ -26,7 +26,6 @@ public class SubscribePublicationCommand implements Command {
         String resp;
         long publicationId = 0;
         String errorMessage = "Cannot subscribe this publication!";
-        PublicationService publicationService = AppServices.getInstance().getPublicationService();
 
         try {
 
@@ -41,7 +40,7 @@ public class SubscribePublicationCommand implements Command {
 
                 resp = PagePath.COMMAND_PUBLICATIONS;
 
-                LOG.info("Subscribe publication (userId = " + user.getId() + "publicationId = " + publicationId+ ")");
+                LOG.info("Subscribe publication (userId = " + user.getId() + " publicationId = " + publicationId+ ")");
 
                 response.sendRedirect(resp);
                 resp = PagePath.COMMAND_REDIRECT;

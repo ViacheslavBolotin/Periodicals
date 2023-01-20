@@ -65,7 +65,9 @@
                     </div>
                 </div>
                 <c:if test="${not empty errorMessage}">
-                    <h5 style="color:#ff0000"> ${errorMessage}</h5>
+                    <div>
+                        <h5 style="color:#ff0000"> ${errorMessage}</h5>
+                    </div>
                 </c:if>
                 <button type="submit" class="btn btn-dark">
                     <fmt:message key="account.menu.edit.button.save"/>

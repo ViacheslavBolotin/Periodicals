@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class BlockUnblockUserCommand implements Command {
 
-    UserService userService = AppServices.getInstance().getUserService();
+    private UserService userService = AppServices.getInstance().getUserService();
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {

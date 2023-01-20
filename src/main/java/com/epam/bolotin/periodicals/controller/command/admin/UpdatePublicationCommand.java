@@ -15,14 +15,13 @@ import javax.servlet.http.HttpServletResponse;
  * @date: 10.01.2023
  */
 public class UpdatePublicationCommand implements Command {
-
+    private PublicationService publicationService = AppServices.getInstance().getPublicationService();
     private static final Logger LOG = Logger.getLogger(UpdatePublicationCommand.class);
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {
-        PublicationService publicationService = AppServices.getInstance().getPublicationService();
-        String resp;
 
+        String resp;
         Publication publication = new Publication();
         long id = Long.parseLong(request.getParameter("publication_id"));
         publication.setId(id);

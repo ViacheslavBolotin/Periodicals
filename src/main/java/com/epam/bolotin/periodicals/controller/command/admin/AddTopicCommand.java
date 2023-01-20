@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class AddTopicCommand implements Command {
     private static final Logger LOG = Logger.getLogger(AddTopicCommand.class);
-    TopicService topicService = AppServices.getInstance().getTopicService();
+    private TopicService topicService = AppServices.getInstance().getTopicService();
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {

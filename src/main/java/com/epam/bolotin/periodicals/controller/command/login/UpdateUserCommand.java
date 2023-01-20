@@ -9,21 +9,22 @@ import org.apache.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * @author: Viacheslav Bolotin
  * @date: 02.01.2023
  */
 public class UpdateUserCommand implements Command {
-
     private static final Logger LOG = Logger.getLogger(UpdateUserCommand.class);
+    private UserService userService = AppServices.getInstance().getUserService();
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {
-        UserService userService = AppServices.getInstance().getUserService();
-        String resp;
 
-        User user = (User) request.getSession().getAttribute("user");
+        String resp;
+        HttpSession session = request.getSession();
+        User user = (User) session.getAttribute("user");
         long id = Long.parseLong(request.getParameter("user_id"));
         user.setId(id);
 

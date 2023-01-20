@@ -17,13 +17,12 @@ import java.util.List;
  * @date: 09.01.2023
  */
 public class EditPublicationCommand implements Command {
-
+    private PublicationService publicationService = AppServices.getInstance().getPublicationService();
+    private TopicService topicService = AppServices.getInstance().getTopicService();
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {
 
         String forward;
-        PublicationService publicationService = AppServices.getInstance().getPublicationService();
-        TopicService topicService = AppServices.getInstance().getTopicService();
 
         if (request.getParameter("publicationId") == null) {
             return PagePath.COMMAND_PUBLICATIONS;

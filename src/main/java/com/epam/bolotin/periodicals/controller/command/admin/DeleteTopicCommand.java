@@ -14,14 +14,13 @@ import javax.servlet.http.HttpServletResponse;
  * @date: 02.01.2023
  */
 public class DeleteTopicCommand implements Command {
-
+    private TopicService topicService = AppServices.getInstance().getTopicService();
     private static final Logger LOG = Logger.getLogger(DeleteTopicCommand.class);
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {
-        TopicService topicService = AppServices.getInstance().getTopicService();
-        String resp;
 
+        String resp;
         long id = Long.parseLong(request.getParameter("topicId"));
 
         try {

@@ -18,12 +18,11 @@ import java.util.List;
  * @date: 16.01.2023
  */
 public class ViewPublicationCommand implements Command {
-
+    private PublicationService publicationService = AppServices.getInstance().getPublicationService();
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {
 
         String forward;
-        PublicationService publicationService = AppServices.getInstance().getPublicationService();
 
         if (request.getParameter("publication_id") == null) {
             return PagePath.COMMAND_PERSONAL_CABINET;

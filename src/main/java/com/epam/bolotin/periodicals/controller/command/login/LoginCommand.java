@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 public class LoginCommand implements Command {
-    UserService service = AppServices.getInstance().getUserService();
+    private UserService service = AppServices.getInstance().getUserService();
     private static final Logger LOG = Logger.getLogger(LoginCommand.class);
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {

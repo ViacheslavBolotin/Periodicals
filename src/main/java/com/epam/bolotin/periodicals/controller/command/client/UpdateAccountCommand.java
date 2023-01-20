@@ -17,13 +17,12 @@ import java.math.BigDecimal;
  * @date: 02.01.2023
  */
 public class UpdateAccountCommand implements Command {
-
+    private AccountService accountService = AppServices.getInstance().getAccountService();
     private static final Logger LOG = Logger.getLogger(UpdateAccountCommand.class);
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {
 
-        AccountService accountService = AppServices.getInstance().getAccountService();
         String resp;
         BigDecimal replenishSum = new BigDecimal(0);
 

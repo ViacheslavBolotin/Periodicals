@@ -15,9 +15,7 @@ import javax.servlet.http.HttpServletResponse;
  * @date: 24.12.2022
  */
 public class AccountCommand implements Command {
-
     private final AccountService accountService =  AppServices.getInstance().getAccountService();
-
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {
 

@@ -15,27 +15,26 @@ import javax.servlet.http.HttpServletResponse;
  * @date: 06.01.2023
  */
 public class AddPublicationCommand implements Command {
+    private PublicationService publicationService = AppServices.getInstance().getPublicationService();
     private static final Logger LOG = Logger.getLogger(AddPublicationCommand.class);
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {
-        PublicationService publicationService = AppServices.getInstance().getPublicationService();
-        String resp;
 
+        String resp;
         Publication publication = new Publication();
 
         try {
-        if (publicationService.validateAndFillPublication(publication, request)) {
+            if (publicationService.validateAndFillPublication(publication, request)) {
 
-            publicationService.save(publication);
-            resp = PagePath.COMMAND_PUBLICATIONS;
+                publicationService.save(publication);
+                resp = PagePath.COMMAND_PUBLICATIONS;
 
-            LOG.debug("New publication added");
-        } else {
-            resp = PagePath.COMMAND_TOPICS;
-            LOG.debug("New publication cannot added");
-        }
-
+                LOG.debug("New publication added");
+            } else {
+                resp = PagePath.COMMAND_TOPICS;
+                LOG.debug("New publication cannot added");
+            }
 
             response.sendRedirect(resp);
             resp = PagePath.COMMAND_REDIRECT;

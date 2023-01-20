@@ -35,7 +35,7 @@ public class LoginCommandTest {
     @Mock
     private HttpSession session;
     @InjectMocks
-    private LoginCommand cut;
+    private LoginCommand command;
 
     private User user = new User();
     private User admin = new User();
@@ -51,7 +51,6 @@ public class LoginCommandTest {
         admin.setPassword(Crypt.hashPassword("pass"));
         admin.setBlocked(false);
         admin.setUserRoleId(1);
-//        MockitoAnnotations.initMocks(this);
     }
 
     @Test
@@ -63,7 +62,7 @@ public class LoginCommandTest {
         Mockito.when(userService.findByName("user")).thenReturn(user);
         Mockito.when(req.getSession()).thenReturn(session);
 
-        String result = cut.execute(req, resp);
+        String result = command.execute(req, resp);
         assertEquals(PagePath.COMMAND_PERSONAL_CABINET, result);
     }
 
@@ -76,7 +75,7 @@ public class LoginCommandTest {
         Mockito.when(userService.findByName("admin")).thenReturn(admin);
         Mockito.when(req.getSession()).thenReturn(session);
 
-        String result = cut.execute(req, resp);
+        String result = command.execute(req, resp);
         assertEquals(PagePath.COMMAND_SHOW_USERS, result);
     }
 
@@ -86,7 +85,7 @@ public class LoginCommandTest {
         Mockito.when(req.getParameter("user_name")).thenReturn(null);
         Mockito.when(req.getParameter("password")).thenReturn(null);
         Mockito.when(req.getSession()).thenReturn(session);
-        String result = cut.execute(req, resp);
+        String result = command.execute(req, resp);
         assertEquals(PagePath.PAGE_LOGIN, result);
     }
 
@@ -98,7 +97,7 @@ public class LoginCommandTest {
         Mockito.when(userService.findByName("admin")).thenReturn(admin);
         Mockito.when(req.getSession()).thenReturn(session);
 
-        String result = cut.execute(req, resp);
+        String result = command.execute(req, resp);
         assertEquals(PagePath.PAGE_LOGIN, result);
     }
 }

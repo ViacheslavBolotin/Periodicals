@@ -15,19 +15,19 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class DeletePublicationCommand implements Command {
 
+    private PublicationService publicationService = AppServices.getInstance().getPublicationService();
     private static final Logger LOG = Logger.getLogger(DeletePublicationCommand.class);
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {
-        PublicationService publicationService = AppServices.getInstance().getPublicationService();
+
         String resp;
 
         long id = Long.parseLong(request.getParameter("publicationId"));
         try {
-        publicationService.delete(id);
-        resp = PagePath.COMMAND_PUBLICATIONS;
-        LOG.debug("Delete publication (id = " + id + ")");
-
+            publicationService.delete(id);
+            resp = PagePath.COMMAND_PUBLICATIONS;
+            LOG.debug("Delete publication (id = " + id + ")");
 
             response.sendRedirect(resp);
             resp = PagePath.COMMAND_REDIRECT;

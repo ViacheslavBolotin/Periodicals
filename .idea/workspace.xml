@@ -4,13 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8d16899-1775-4faf-b2b4-05886fd7db10" name="Changes" comment="0.1">
+    <list default="true" id="e8d16899-1775-4faf-b2b4-05886fd7db10" name="Changes" comment="0.1.1">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/epam/bolotin/periodicals/CryptTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/epam/bolotin/periodicals/controller/command/CommandFactoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/epam/bolotin/periodicals/controller/command/admin/AddPublicationCommandTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/epam/bolotin/periodicals/controller/command/admin/DeletePublicationCommandTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/epam/bolotin/periodicals/controller/command/admin/DeleteTopicCommandTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/epam/bolotin/periodicals/controller/command/admin/EditPublicationCommandTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/epam/bolotin/periodicals/controller/command/admin/EditTopicCommandTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/epam/bolotin/periodicals/controller/command/admin/EditUserCommandTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/epam/bolotin/periodicals/controller/command/admin/SubscribePublicationCommandTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/epam/bolotin/periodicals/controller/command/admin/UpdateAccountCommandTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/epam/bolotin/periodicals/controller/command/admin/UpdatePublicationCommandTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/epam/bolotin/periodicals/controller/command/admin/UpdateTopicCommandTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/epam/bolotin/periodicals/controller/command/admin/UpdateUserCommandTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/epam/bolotin/periodicals/controller/command/admin/ViewPublicationCommandTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/admin/ShowUserListCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/admin/ShowUserListCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/admin/AddPublicationCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/admin/AddPublicationCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/admin/AddTopicCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/admin/AddTopicCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/admin/BlockUnblockUserCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/admin/BlockUnblockUserCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/admin/DeletePublicationCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/admin/DeletePublicationCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/admin/DeleteTopicCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/admin/DeleteTopicCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/admin/EditPublicationCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/admin/EditPublicationCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/admin/EditTopicCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/admin/EditTopicCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/admin/EditUserCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/admin/EditUserCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/admin/UpdatePublicationCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/admin/UpdatePublicationCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/admin/UpdateTopicCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/admin/UpdateTopicCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/client/AccountCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/client/AccountCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/client/PersonalCabinetCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/client/PersonalCabinetCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/client/SubscribePublicationCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/client/SubscribePublicationCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/client/UpdateAccountCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/client/UpdateAccountCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/client/ViewPublicationCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/client/ViewPublicationCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/login/LoginCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/login/LoginCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/login/NewUserCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/login/NewUserCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/login/RegistrationCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/login/RegistrationCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin/users.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin/users.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/login/UpdateUserCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/login/UpdateUserCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/model/service/AppServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/model/service/AppServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login/new_user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login/new_user.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/bolotin/periodicals/controller/command/admin/AddTopicCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/bolotin/periodicals/controller/command/admin/AddTopicCommandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/bolotin/periodicals/controller/command/admin/EditClientCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/bolotin/periodicals/controller/command/admin/BlockUnblockUserCommandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/bolotin/periodicals/controller/command/login/LoginCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/bolotin/periodicals/controller/command/login/LoginCommandTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,15 +115,23 @@
       <recent name="com.epam.bolotin.periodicals.model.db.repository" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.epam.bolotin.periodicals.controller.command.admin" />
       <recent name="com.epam.bolotin.periodicals.controller.command.client" />
       <recent name="com.epam.bolotin.periodicals.controller.command.login" />
-      <recent name="com.epam.bolotin.periodicals.controller.command.admin" />
       <recent name="com.epam.bolotin.periodicals.model.service.implementation" />
       <recent name="com.epam.bolotin.periodicals.model.service" />
     </key>
   </component>
-  <component name="RunManager" selected="Smart Tomcat.Periodicals">
-    <configuration name="AddTopicCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.All in Periodicals">
+    <configuration name="All in Periodicals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Periodicals" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SubscribePublicationCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Periodicals" />
       <extension name="coverage">
         <pattern>
@@ -98,13 +140,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.epam.bolotin.periodicals.controller.command.admin" />
-      <option name="MAIN_CLASS_NAME" value="com.epam.bolotin.periodicals.controller.command.admin.AddTopicCommandTest" />
+      <option name="MAIN_CLASS_NAME" value="com.epam.bolotin.periodicals.controller.command.admin.SubscribePublicationCommandTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AddTopicCommandTest.TestValidateAndFillTopicSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ViewPublicationCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Periodicals" />
       <extension name="coverage">
         <pattern>
@@ -113,14 +155,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.epam.bolotin.periodicals.controller.command.admin" />
-      <option name="MAIN_CLASS_NAME" value="com.epam.bolotin.periodicals.controller.command.admin.AddTopicCommandTest" />
-      <option name="METHOD_NAME" value="TestValidateAndFillTopicSuccess" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="com.epam.bolotin.periodicals.controller.command.admin.ViewPublicationCommandTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AddTopicCommandTest.addNewTopicSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ViewPublicationCommandTest.testViewPublication" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Periodicals" />
       <extension name="coverage">
         <pattern>
@@ -129,17 +170,9 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.epam.bolotin.periodicals.controller.command.admin" />
-      <option name="MAIN_CLASS_NAME" value="com.epam.bolotin.periodicals.controller.command.admin.AddTopicCommandTest" />
-      <option name="METHOD_NAME" value="addNewTopicSuccess" />
+      <option name="MAIN_CLASS_NAME" value="com.epam.bolotin.periodicals.controller.command.admin.ViewPublicationCommandTest" />
+      <option name="METHOD_NAME" value="testViewPublication" />
       <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="All in Periodicals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Periodicals" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -181,11 +214,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.com.epam.bolotin.periodicals in Periodicals" />
         <item itemvalue="JUnit.All in Periodicals" />
-        <item itemvalue="JUnit.AddTopicCommandTest.addNewTopicSuccess" />
-        <item itemvalue="JUnit.AddTopicCommandTest" />
-        <item itemvalue="JUnit.AddTopicCommandTest.TestValidateAndFillTopicSuccess" />
+        <item itemvalue="JUnit.com.epam.bolotin.periodicals in Periodicals" />
+        <item itemvalue="JUnit.SubscribePublicationCommandTest" />
+        <item itemvalue="JUnit.ViewPublicationCommandTest" />
+        <item itemvalue="JUnit.ViewPublicationCommandTest.testViewPublication" />
       </list>
     </recent_temporary>
   </component>
@@ -219,7 +252,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674058986744</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="0.1.1">
+      <created>1674063520048</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1674063520048</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -235,31 +275,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="0.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="0.1" />
+    <MESSAGE value="0.1.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="0.1.1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/client/SubscribePublicationCommand.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/client/SubscribePublicationCommand.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/epam/bolotin/periodicals/controller/command/login/LoginCommandTest.java</url>
-          <line>75</line>
-          <option name="timeStamp" value="43" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/admin/AddTopicCommand.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="62" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/login/LoginCommand.java</url>
           <line>26</line>
@@ -269,6 +290,16 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/admin/ShowUserListCommand.java</url>
           <line>23</line>
           <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/model/service/implementation/UserServiceImpl.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="80" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/client/ViewPublicationCommand.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="91" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -282,8 +313,15 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Periodicals$com_epam_bolotin_periodicals_in_Periodicals.ic" NAME="com.epam.bolotin.periodicals in Periodicals Coverage Results" MODIFIED="1673982055675" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Periodicals$CommandFactoryTest_testGetCommand.ic" NAME="CommandFactoryTest.testGetCommand Coverage Results" MODIFIED="1674130086945" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.epam.bolotin.periodicals.controller.command.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Periodicals$CryptTest.ic" NAME="CryptTest Coverage Results" MODIFIED="1674137888137" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.epam.bolotin.periodicals.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/Periodicals$com_epam_bolotin_periodicals_in_Periodicals.ic" NAME="com.epam.bolotin.periodicals in Periodicals Coverage Results" MODIFIED="1674227640474" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.epam.bolotin.periodicals.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Periodicals$All_in_Periodicals.ic" NAME="All in Periodicals Coverage Results" MODIFIED="1674227883475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

@@ -37,7 +37,6 @@ public class AppServices {
     public TopicService getTopicService() {
         return topicService;
     }
-
     public PublicationService getPublicationService() {
         return publicationService;
     }

@@ -38,7 +38,7 @@ public class RegistrationCommand implements Command {
                     user.setUserRoleId(2);
                     user.setBlocked(false);
                     userService.save(user);
-                    LOG.debug("New user added");
+                    LOG.debug("New user added (" + user.getUserName() + ")");
                 } else {
 
                     errorMessage = "Unable to register a new user. A user with the same name already exists in the system!";
@@ -52,8 +52,10 @@ public class RegistrationCommand implements Command {
 
 
             } else {
-                resp = PagePath.COMMAND_NEW_USER;
-                LOG.debug("New user cannot added");
+                errorMessage = "Unable to register a new user. Incorrect data entered!";
+                request.setAttribute("errorMessage", errorMessage);
+                resp = PagePath.COMMAND_NEW_USER+"&errorMessage="+errorMessage;
+                LOG.debug("New user cannot added. Incorrect data entered!");
             }
 
             response.sendRedirect(resp);

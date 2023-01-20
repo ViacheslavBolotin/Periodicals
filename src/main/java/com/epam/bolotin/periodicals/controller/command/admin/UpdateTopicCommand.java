@@ -15,14 +15,13 @@ import javax.servlet.http.HttpServletResponse;
  * @date: 02.01.2023
  */
 public class UpdateTopicCommand implements Command {
-
+    private TopicService topicService = AppServices.getInstance().getTopicService();
     private static final Logger LOG = Logger.getLogger(UpdateTopicCommand.class);
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {
-        TopicService topicService = AppServices.getInstance().getTopicService();
-        String resp;
 
+        String resp;
         Topic topic = new Topic();
         long id = Long.parseLong(request.getParameter("topic_id"));
         topic.setId(id);

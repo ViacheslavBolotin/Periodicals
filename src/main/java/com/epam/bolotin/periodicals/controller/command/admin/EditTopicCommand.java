@@ -14,12 +14,11 @@ import javax.servlet.http.HttpServletResponse;
  * @date: 02.01.2023
  */
 public class EditTopicCommand implements Command {
-
+    private TopicService topicService = AppServices.getInstance().getTopicService();
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {
 
         String forward;
-        TopicService topicService = AppServices.getInstance().getTopicService();
 
         if (request.getParameter("topicId") == null) {
             return PagePath.COMMAND_TOPICS;
