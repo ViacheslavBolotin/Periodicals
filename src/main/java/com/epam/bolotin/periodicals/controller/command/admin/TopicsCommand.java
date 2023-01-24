@@ -13,9 +13,12 @@ import javax.servlet.http.HttpServletResponse;
  * @date: 02.01.2023
  */
 public class TopicsCommand implements Command {
+
+    private TopicService topicService = AppServices.getInstance().getTopicService();
+
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {
-        TopicService topicService = AppServices.getInstance().getTopicService();
+
         request.setAttribute("topics", topicService.findAll());
         return PagePath.PAGE_TOPICS;
     }

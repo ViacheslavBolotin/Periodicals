@@ -5,10 +5,8 @@ import com.epam.bolotin.periodicals.model.db.dto.PublicationDto;
 import com.epam.bolotin.periodicals.model.db.entity.Publication;
 import com.epam.bolotin.periodicals.model.db.entity.ReaderPublication;
 
-import java.math.BigDecimal;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Timestamp;
 
 public class PublicationBuilder {
 

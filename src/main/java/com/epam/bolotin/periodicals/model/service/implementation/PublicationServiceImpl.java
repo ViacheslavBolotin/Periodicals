@@ -1,14 +1,11 @@
 package com.epam.bolotin.periodicals.model.service.implementation;
 
 import com.epam.bolotin.periodicals.exception.AppException;
-import com.epam.bolotin.periodicals.exception.DBException;
 import com.epam.bolotin.periodicals.model.Validator;
 import com.epam.bolotin.periodicals.model.db.dto.PublicationDto;
 import com.epam.bolotin.periodicals.model.db.entity.Publication;
 import com.epam.bolotin.periodicals.model.db.repository.AccountRepository;
 import com.epam.bolotin.periodicals.model.db.repository.PublicationRepository;
-import com.epam.bolotin.periodicals.model.db.repository.mysql.AccountRepositoryMySql;
-import com.epam.bolotin.periodicals.model.service.AppServices;
 import com.epam.bolotin.periodicals.model.service.PublicationService;
 
 import javax.servlet.http.HttpServletRequest;
@@ -21,10 +18,12 @@ import java.util.List;
  */
 public class PublicationServiceImpl implements PublicationService {
 
+    private final AccountRepository accountRepository;
     private final PublicationRepository publicationRepository;
 
-    public PublicationServiceImpl(PublicationRepository publicationRepository) {
+    public PublicationServiceImpl(PublicationRepository publicationRepository, AccountRepository accountRepository) {
         this.publicationRepository = publicationRepository;
+        this.accountRepository = accountRepository;
     }
 
     @Override
@@ -75,13 +74,19 @@ public class PublicationServiceImpl implements PublicationService {
         publication.setTopicId(Long.parseLong(tempString));
 
         tempString = request.getParameter("publication_title").trim();
+        errorMessage = Validator.validateTitle(tempString, "publication_title",255);
+        if (errorMessage != null) {
+            request.setAttribute("errorMessage", errorMessage);
+            return false;
+        }
         publication.setTitle(tempString);
 
         tempString = request.getParameter("publication_price").trim();
-        errorMessage = Validator.validateAmmount(tempString);
+        errorMessage = Validator.validateAmount(tempString);
         if (errorMessage != null) {
             request.setAttribute("errorMessage", errorMessage);
-            return false;        }
+            return false;
+        }
         publication.setPrice(new BigDecimal(tempString));
 
         tempString = request.getParameter("publication_text").trim();
@@ -103,8 +108,6 @@ public class PublicationServiceImpl implements PublicationService {
 
     @Override
     public int subscribeToPublication(long userId, long publicationId) throws AppException {
-
-        final AccountRepository accountRepository = new AccountRepositoryMySql();
 
         BigDecimal amount = accountRepository.getAmountByUserId(userId);
         Publication publication = findByID(publicationId);

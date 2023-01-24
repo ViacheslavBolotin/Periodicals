@@ -6,6 +6,7 @@ import com.epam.bolotin.periodicals.model.db.dto.AccountDto;
 import com.epam.bolotin.periodicals.model.db.entity.Account;
 
 import javax.servlet.http.HttpServletRequest;
+import java.math.BigDecimal;
 import java.util.List;
 
 public interface AccountService {
@@ -15,7 +16,6 @@ public interface AccountService {
     void delete(long id) throws AppException;
 
     List<Account> findAll();
-    List<AccountDto> findAllFullInfo();
     Account findByID(long id);
     Account findByUserId(long id);
 

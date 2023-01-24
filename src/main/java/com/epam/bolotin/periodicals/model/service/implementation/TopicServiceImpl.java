@@ -56,7 +56,7 @@ public class TopicServiceImpl implements TopicService {
         String errorMessage;
         String tempString = request.getParameter("topic_name").trim();
 
-        errorMessage = Validator.validateSentences(tempString, "topic_name", 255);
+        errorMessage = Validator.validateTitle(tempString, "topic_name", 255);
         if (errorMessage != null) {
             request.setAttribute("errorMessage", errorMessage);
             return false;

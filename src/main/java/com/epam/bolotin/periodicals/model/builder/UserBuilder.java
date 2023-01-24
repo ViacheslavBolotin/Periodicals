@@ -7,26 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class UserBuilder {
-//    @Override
-//    public List<User> getListOfResult(ResultSet rs) throws SQLException {
-//        List<User> users = new ArrayList<>();
-//        while (rs.next()) {
-//            User user = new User();
-//            mapToUser(rs, user);
-//            users.add(user);
-//        }
-//        return users;
-//    }
-//
-//    @Override
-//    public User getResult(ResultSet rs) throws SQLException {
-//        User user = new User();
-//        while (rs.next()) {
-//            mapToUser(rs, user);
-//        }
-//        return user;
-//    }
-//
+
     public static void fillUser(ResultSet rs, User user) throws SQLException {
         user.setId(rs.getLong(Fields.USER_ID));
         user.setUserName(rs.getString(Fields.USER_NAME));

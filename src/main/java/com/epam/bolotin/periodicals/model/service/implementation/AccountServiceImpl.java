@@ -44,11 +44,6 @@ public class AccountServiceImpl implements AccountService {
     }
 
     @Override
-    public List<AccountDto> findAllFullInfo() {
-        return this.accountRepository.getAllFullInfo();
-    }
-
-    @Override
     public Account findByID(long id) {
         return this.accountRepository.getById(id);
     }
@@ -63,7 +58,7 @@ public class AccountServiceImpl implements AccountService {
         String errorMessage;
         String tempString = request.getParameter("amount").trim();
 
-        errorMessage = Validator.validateAmmount(tempString);
+        errorMessage = Validator.validateAmount(tempString);
         if (errorMessage != null) {
             request.setAttribute("errorMessage", errorMessage);
             return false;        }

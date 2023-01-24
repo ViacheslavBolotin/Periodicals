@@ -17,9 +17,11 @@ import java.util.List;
  * @date: 26.12.2022
  */
 public class ShowUserListCommand implements Command {
+
+    private UserService userService = AppServices.getInstance().getUserService();
+
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {
-        UserService userService = AppServices.getInstance().getUserService();
 
         List<User> users = userService.findAll();
         List<User> fullUser = new ArrayList<>();

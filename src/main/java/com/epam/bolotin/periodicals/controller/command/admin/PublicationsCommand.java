@@ -20,11 +20,12 @@ import java.util.List;
  * @date: 13.01.2023
  */
 public class PublicationsCommand implements Command {
+
+    private TopicService topicService = AppServices.getInstance().getTopicService();
+    private PublicationService publicationService = AppServices.getInstance().getPublicationService();
+
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {
-
-        TopicService topicService = AppServices.getInstance().getTopicService();
-        PublicationService publicationService = AppServices.getInstance().getPublicationService();
 
         List<Topic> topics = topicService.findAll();
         request.setAttribute("topics", topics);

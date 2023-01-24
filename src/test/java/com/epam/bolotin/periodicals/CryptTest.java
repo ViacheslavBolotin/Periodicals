@@ -1,6 +1,5 @@
 package com.epam.bolotin.periodicals;
 
-import com.epam.bolotin.periodicals.controller.PagePath;
 import com.epam.bolotin.periodicals.exception.AppException;
 import org.junit.jupiter.api.Test;
 

@@ -21,8 +21,6 @@ public class AccountRepositoryMySql implements AccountRepository {
 
     private static final String GET_SIZE = "SELECT count(*) FROM account";
     private static final String GET_ALL = "SELECT * FROM account";
-    private static final String GET_ALL_FULL_INFO =
-            "SELECT a.*, u.username, u.first_name, u.last_name FROM account as a INNER JOIN user as u ON (a.user_id = u.id)";
     private static final String GET_ALL_LIMIT =
             "SELECT a.*, u.username, u.first_name, u.last_name FROM account as a INNER JOIN user as u ON (a.user_id = u.id) LIMIT ? , ?";
     private static final String GET_ALL_LIMIT_SORT_NAME_ASC =
@@ -77,11 +75,6 @@ public class AccountRepositoryMySql implements AccountRepository {
     @Override
     public List<Account> getAll() {
         return queryExecuter.executeAndReturnList(instance, GET_ALL);
-    }
-
-    @Override
-    public List<AccountDto> getAllFullInfo() {
-        return ((AccountQueryBuilder)queryExecuter).executeAndReturnValuesDto(instance, GET_ALL_FULL_INFO);
     }
 
     @Override

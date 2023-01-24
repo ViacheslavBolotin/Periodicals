@@ -12,6 +12,7 @@ public class Validator {
     private static final String HAS_WRONG_LENGHT = "\" has wrong lenght";
     public static final String REGEX_MAIL = "^([a-z0-9_-]+\\.)*[a-z0-9_-]+@[a-z0-9_-]+(\\.[a-z0-9_-]+)*\\.[a-z]{2,6}$";
     public static final String REGEX_NAME = "[А-ґА-яà-ÿA-Za-z\\d]+";
+    public static final String REGEX_TITLE = "[А-ґА-яà-ÿA-Za-z0-9\\d\\s\\w]*";
     public static final String REGEX_DATE = "([0-9]{3}[1-9]|[0-9]{2}[1-9][0-9]{1}|[0-9]{1}[1-9][0-9]{2}|[1-9][0-9]{3})-(((0[13578]|1[02])-" +
             "(0[1-9]|[12][0-9]|3[01]))|((0[469]|11)-(0[1-9]|[12][0-9]|30))|(02-(0[1-9]|[1][0-9]|2[0-8])))";
 
@@ -44,8 +45,7 @@ public class Validator {
      * @param length maximum length of the variable in database
      * @return error message or null if validation was successful
      */
-    public static String validateNames(String field, String fieldName,
-                                       int length) {
+    public static String validateNames(String field, String fieldName, int length) {
 
         if (field.length() == 0) {
             return FIELD + fieldName + EMPTY;
@@ -67,6 +67,39 @@ public class Validator {
     }
 
     /**
+     *
+     * @param field value of the input field
+     * @param fieldName name of the input field
+     * @param length maximum length of the variable in database
+     * @return error message or null if validation was successful
+     */
+    public static String validateTitle(String field, String fieldName, int length) {
+
+        if (field.length() == 0) {
+            return FIELD + fieldName + EMPTY;
+        } else if (field.length() > length) {
+            return FIELD + fieldName + LONG;
+        }
+
+        Pattern p = Pattern.compile(REGEX_TITLE);
+        Matcher m = p.matcher(field);
+
+        if (!m.find()) {
+            return FIELD + fieldName + INVALID_SYMBOLS;
+        }
+        if (m.group().length() != field.length()) {
+            return FIELD + fieldName + INVALID_SYMBOLS;
+        }
+        p = Pattern.compile("[ ]+");
+        m = p.matcher(field);
+
+        if (m.find() && m.group().length() == field.length()) {
+            return FIELD + fieldName + INVALID_SYMBOLS;
+        }
+        return null;
+    }
+
+    /**
      * Validator for 'test name' 'question name' 'answer name' input fields
      * @param field value of the input field
      * @param fieldName name of the input field
@@ -74,8 +107,7 @@ public class Validator {
      * @return error message or null if validation was successful
      */
 
-    public static String validateSentences(String field, String fieldName,
-                                           int length) {
+    public static String validateSentences(String field, String fieldName, int length) {
 
         if (field.length() == 0) {
             return FIELD + fieldName + EMPTY;
@@ -115,16 +147,16 @@ public class Validator {
                                        int length) {
 
         if (field.length() == 0) {
-            return FIELD + "login" + EMPTY;
+            return FIELD + field + EMPTY;
         } else if (field.length() > length) {
-            return FIELD + "login" + LONG;
+            return FIELD + field + LONG;
         }
 
         Pattern p = Pattern.compile(REGEX_LOGIN);
         Matcher m = p.matcher(field);
 
         if (m.matches()) return null;
-        return FIELD + "login" + INVALID_SYMBOLS;
+        return FIELD + field + INVALID_SYMBOLS;
 
     }
 
@@ -138,7 +170,7 @@ public class Validator {
         Pattern p = Pattern.compile(REGEX_DATE);
         Matcher m = p.matcher(field);
         if (m.matches()) return null;
-        return FIELD + "card number" + INVALID_SYMBOLS;
+        return FIELD + field + INVALID_SYMBOLS;
 
     }
 
@@ -147,12 +179,12 @@ public class Validator {
      * @param field value of the field
      * @return error message or null if validation was successful
      */
-    public static String validateAmmount(String field) {
+    public static String validateAmount(String field) {
 
         Pattern p = Pattern.compile(REGEX_AMMOUNT);
         Matcher m = p.matcher(field);
         if (m.matches()) return null;
-        return FIELD + "ammount" + INVALID_SYMBOLS;
+        return FIELD + field + INVALID_SYMBOLS;
 
     }
 
@@ -165,14 +197,14 @@ public class Validator {
 
         int length = 9;
         if (field.length() == 0) {
-            return FIELD + "number" + EMPTY;
+            return FIELD + field + EMPTY;
         } else if (field.length() > length) {
-            return FIELD + "number" + LONG;
+            return FIELD + field + LONG;
         }
         Pattern p = Pattern.compile(REGEX_INT_NUMBER);
         Matcher m = p.matcher(field);
         if (m.matches()) return null;
-        return FIELD + "number" + INVALID_SYMBOLS;
+        return FIELD + field + INVALID_SYMBOLS;
     }
 
 }

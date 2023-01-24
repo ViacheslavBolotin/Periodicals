@@ -9,17 +9,19 @@ import com.epam.bolotin.periodicals.model.service.AppServices;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * @author: Viacheslav Bolotin
  * @date: 24.12.2022
  */
 public class AccountCommand implements Command {
-    private final AccountService accountService =  AppServices.getInstance().getAccountService();
+    private AccountService accountService =  AppServices.getInstance().getAccountService();
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {
 
-        User user = (User) request.getSession().getAttribute("user");
+        HttpSession session = request.getSession();
+        User user = (User) session.getAttribute("user");
         Account account = accountService.findByUserId(user.getId());
         request.setAttribute("account", account);
 

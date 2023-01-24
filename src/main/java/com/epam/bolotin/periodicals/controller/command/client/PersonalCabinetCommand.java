@@ -14,6 +14,7 @@ import com.epam.bolotin.periodicals.model.service.TopicService;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 /**
@@ -22,15 +23,15 @@ import java.util.List;
  */
 public class PersonalCabinetCommand implements Command {
 
-    //private final AccountService accountService =  AppServices.getInstance().getAccountService();
+    private TopicService topicService = AppServices.getInstance().getTopicService();
+    private PublicationService publicationService = AppServices.getInstance().getPublicationService();
+    //private AccountService accountService =  AppServices.getInstance().getAccountService();
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {
 
-        User user = (User) request.getSession().getAttribute("user");
-
-        TopicService topicService = AppServices.getInstance().getTopicService();
-        PublicationService publicationService = AppServices.getInstance().getPublicationService();
+        HttpSession session = request.getSession();
+        User user = (User) session.getAttribute("user");
 
         List<Topic> topics = topicService.findAll();
         request.setAttribute("topics", topics);

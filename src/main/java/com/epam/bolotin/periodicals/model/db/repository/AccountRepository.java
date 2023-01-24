@@ -28,8 +28,6 @@ public interface AccountRepository {
 
     List<Account> getAll();
 
-    List<AccountDto> getAllFullInfo();
-
     long  getSize();
     List<AccountDto> getAllLimitSort(long from, long size, String sortType);
 

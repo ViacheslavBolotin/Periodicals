@@ -69,12 +69,12 @@ public class ValidatorTest {
 
     @Test
     void validateAmmountSuccess() {
-        assertEquals(null,Validator.validateAmmount("105.93"));
+        assertEquals(null,Validator.validateAmount("105.93"));
     }
 
     @Test
     void validateAmmountFailData() {
-        assertNotEquals(null,Validator.validateAmmount("105,93"));
+        assertNotEquals(null,Validator.validateAmount("105,93"));
     }
 
     @Test

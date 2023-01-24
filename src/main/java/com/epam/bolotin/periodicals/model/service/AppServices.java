@@ -21,12 +21,12 @@ public class AppServices {
     private static volatile AppServices appServices = new AppServices();
     private final UserRepository userRepository = new UserRepositoryMySql();
     private final UserService userService = new UserServiceImpl(userRepository);
+    private final AccountRepository accountRepository = new AccountRepositoryMySql();
+    private final AccountService accountService = new AccountServiceImpl(accountRepository);
     private final TopicRepository topicRepository = new TopicRepositoryMySql();
     private final TopicService topicService = new TopicServiceImpl(topicRepository);
     private final PublicationRepository publicationRepository = new PublicationRepositoryMySql();
-    private final PublicationService publicationService = new PublicationServiceImpl(publicationRepository);
-    private final AccountRepository accountRepository = new AccountRepositoryMySql();
-    private final AccountService accountService = new AccountServiceImpl(accountRepository);
+    private final PublicationService publicationService = new PublicationServiceImpl(publicationRepository, accountRepository);
 
     public static AppServices getInstance() {
         return appServices;
