@@ -22,6 +22,7 @@ public class UpdateUserCommand implements Command {
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {
 
+        String errorMessage = "";
         String resp;
         HttpSession session = request.getSession();
         User user = (User) session.getAttribute("user");
@@ -41,16 +42,22 @@ public class UpdateUserCommand implements Command {
                     resp = PagePath.COMMAND_PERSONAL_CABINET;
                 }
 
+                response.sendRedirect(resp);
+                resp = PagePath.COMMAND_REDIRECT;
+
                 LOG.info("User update (id = " + user.getId() + ")");
+                LOG.debug("User update (COMMAND_REDIRECT)");
+
             } else {
+                errorMessage = "error.user.update";
+                request.setAttribute("errorMessage", errorMessage);
                 resp = PagePath.PAGE_ERROR;
                 LOG.info("User (id = " + user.getId() + ") cannot update");
             }
 
-            response.sendRedirect(resp);
-            resp = PagePath.COMMAND_REDIRECT;
-            LOG.debug("User update (COMMAND_REDIRECT)");
         } catch (Exception e) {
+            errorMessage = "error.user.update";
+            request.setAttribute("errorMessage", errorMessage);
             resp = PagePath.PAGE_ERROR;
             LOG.error("User (id = " + user.getId() + ") update error (" + e.getMessage() + ")");
         }

@@ -38,7 +38,7 @@ public class LoginCommand implements Command {
         String forward = PagePath.PAGE_LOGIN;
 
         if (userName == null || password == null || userName.isEmpty() || password.isEmpty()) {
-            errorMessage = "Login or password can't be empty";
+            errorMessage = "error.login_user.empty_data";
             request.setAttribute("errorMessage", errorMessage);
             LOG.info(errorMessage);
             return forward;
@@ -47,13 +47,13 @@ public class LoginCommand implements Command {
         User user = service.findByName(userName);
 
         if (user.getUserName() == null || !Crypt.checkPassword(password, user.getPassword())) {
-            errorMessage = "Cannot find user with such login or password";
+            errorMessage = "error.login_user.cannot_find";
             request.setAttribute("errorMessage", errorMessage);
             LOG.info(errorMessage);
             return forward;
         } else {
             if (user.isBlocked()){
-                errorMessage = "You are blocked by admin";
+                errorMessage = "error.login_user.blocked";
                 request.setAttribute("errorMessage", errorMessage);
                 LOG.info(errorMessage);
                 return forward;

@@ -50,6 +50,6 @@ public class UpdatePublicationCommandTest {
 
         String result = command.execute(req, resp);
         Mockito.verify(publicationService, Mockito.never()).update(any());
-        assertEquals(PagePath.COMMAND_REDIRECT, result);
+        assertEquals(PagePath.PAGE_ERROR, result);
     }
 }

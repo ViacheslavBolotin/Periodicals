@@ -22,6 +22,7 @@ public class AddTopicCommand implements Command {
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {
 
+        String errorMessage = "";
         String resp;
         Topic topic = new Topic();
 
@@ -41,6 +42,8 @@ public class AddTopicCommand implements Command {
             resp = PagePath.COMMAND_REDIRECT;
             LOG.debug("New topic added (COMMAND_REDIRECT)");
         } catch (Exception e) {
+            errorMessage = "error.topic.add";
+            request.setAttribute("errorMessage", errorMessage);
             resp = PagePath.PAGE_ERROR;
             LOG.error("New topic added error (" + e.getMessage() + ")");
         }

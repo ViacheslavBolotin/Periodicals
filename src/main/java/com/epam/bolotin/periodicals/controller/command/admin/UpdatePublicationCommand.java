@@ -21,6 +21,7 @@ public class UpdatePublicationCommand implements Command {
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {
 
+        String errorMessage = "";
         String resp;
         Publication publication = new Publication();
         long id = Long.parseLong(request.getParameter("publication_id"));
@@ -32,17 +33,22 @@ public class UpdatePublicationCommand implements Command {
 
                 publicationService.update(publication);
                 resp = PagePath.COMMAND_PUBLICATIONS;
+                response.sendRedirect(resp);
+                resp = PagePath.COMMAND_REDIRECT;
 
                 LOG.info("Publication update (id = " + publication.getId() + ")");
+                LOG.debug("Publication update (COMMAND_REDIRECT)");
+
             } else {
+                errorMessage = "error.publication.update";
+                request.setAttribute("errorMessage", errorMessage);
                 resp = PagePath.PAGE_ERROR;
                 LOG.info("Publication (id = " + publication.getId() + ") cannot update");
             }
 
-            response.sendRedirect(resp);
-            resp = PagePath.COMMAND_REDIRECT;
-            LOG.debug("Publication update (COMMAND_REDIRECT)");
         } catch (Exception e) {
+            errorMessage = "error.publication.update";
+            request.setAttribute("errorMessage", errorMessage);
             resp = PagePath.PAGE_ERROR;
             LOG.error("Publication (id = " + publication.getId() + ") update error (" + e.getMessage() + ")");
         }

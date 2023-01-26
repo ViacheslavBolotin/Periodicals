@@ -21,6 +21,7 @@ public class AddPublicationCommand implements Command {
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {
 
+        String errorMessage = "";
         String resp;
         Publication publication = new Publication();
 
@@ -40,6 +41,8 @@ public class AddPublicationCommand implements Command {
             resp = PagePath.COMMAND_REDIRECT;
             LOG.debug("New publication added (COMMAND_REDIRECT)");
         } catch (Exception e) {
+            errorMessage = "error.publication.add";
+            request.setAttribute("errorMessage", errorMessage);
             resp = PagePath.PAGE_ERROR;
             LOG.error("New publication added error (" + e.getMessage() + ")");
         }

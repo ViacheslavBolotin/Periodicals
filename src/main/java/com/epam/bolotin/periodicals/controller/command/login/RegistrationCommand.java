@@ -41,7 +41,7 @@ public class RegistrationCommand implements Command {
                     LOG.debug("New user added (" + user.getUserName() + ")");
                 } else {
 
-                    errorMessage = "Unable to register a new user. A user with the same name already exists in the system!";
+                    errorMessage = "error.add_user.already_exists";
                     request.setAttribute("errorMessage", errorMessage);
                     LOG.info("Unable to register a new user. A user with the same name already exists in the system!");
                 }
@@ -52,9 +52,11 @@ public class RegistrationCommand implements Command {
 
 
             } else {
-                errorMessage = "Unable to register a new user. Incorrect data entered!";
+                errorMessage = "error.add_user.incorrect_data";
                 request.setAttribute("errorMessage", errorMessage);
-                resp = PagePath.COMMAND_NEW_USER+"&errorMessage="+errorMessage;
+                String page = request.getParameter("page").trim();
+                resp = (page.equals("users")) ? PagePath.COMMAND_SHOW_USERS+"&errorMessage="+errorMessage :
+                        PagePath.COMMAND_NEW_USER+"&errorMessage="+errorMessage;
                 LOG.debug("New user cannot added. Incorrect data entered!");
             }
 

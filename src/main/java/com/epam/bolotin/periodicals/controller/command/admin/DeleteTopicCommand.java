@@ -20,6 +20,7 @@ public class DeleteTopicCommand implements Command {
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {
 
+        String errorMessage = "";
         String resp;
         long id = Long.parseLong(request.getParameter("topicId"));
 
@@ -32,6 +33,8 @@ public class DeleteTopicCommand implements Command {
             resp = PagePath.COMMAND_REDIRECT;
             LOG.debug("Delete topic (COMMAND_REDIRECT)");
         } catch (Exception e) {
+            errorMessage = "error.topic.delete";
+            request.setAttribute("errorMessage", errorMessage);
             resp = PagePath.PAGE_ERROR;
             LOG.error("Delete topic (id = " + id + ") error (" + e.getMessage() + ")");
         }

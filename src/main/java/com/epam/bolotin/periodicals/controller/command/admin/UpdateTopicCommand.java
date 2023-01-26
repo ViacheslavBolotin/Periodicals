@@ -21,6 +21,7 @@ public class UpdateTopicCommand implements Command {
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {
 
+        String errorMessage = "";
         String resp;
         Topic topic = new Topic();
         long id = Long.parseLong(request.getParameter("topic_id"));
@@ -32,17 +33,20 @@ public class UpdateTopicCommand implements Command {
 
                 topicService.update(topic);
                 resp = PagePath.COMMAND_TOPICS;
-
+                response.sendRedirect(resp);
+                resp = PagePath.COMMAND_REDIRECT;
                 LOG.info("Topic update (id = " + topic.getId() + ")");
+                LOG.debug("Topic update (COMMAND_REDIRECT)");
             } else {
+                errorMessage = "error.topic.update";
+                request.setAttribute("errorMessage", errorMessage);
                 resp = PagePath.PAGE_ERROR;
                 LOG.info("Topic (id = " + topic.getId() + ") cannot update");
             }
 
-            response.sendRedirect(resp);
-            resp = PagePath.COMMAND_REDIRECT;
-            LOG.debug("Topic update (COMMAND_REDIRECT)");
         } catch (Exception e) {
+            errorMessage = "error.topic.update";
+            request.setAttribute("errorMessage", errorMessage);
             resp = PagePath.PAGE_ERROR;
             LOG.error("Topic (id = " + topic.getId() + ") update error (" + e.getMessage() + ")");
         }

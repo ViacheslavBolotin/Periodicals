@@ -11,7 +11,8 @@
 
 <div>
 <c:if test="${not empty errorMessage}">
-                    <h5 style="color:#ff0000"> ${errorMessage}</h5>
+                    <h5 style="color:#ff0000">
+                    <fmt:message key="${errorMessage}"/></h5>
 </c:if>
 </div>
 

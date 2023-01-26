@@ -71,7 +71,7 @@ public class UpdateUserCommandTest {
 
         String result = command.execute(req, resp);
         Mockito.verify(userService, Mockito.never()).update(any(User.class));
-        assertEquals(PagePath.COMMAND_REDIRECT, result);
+        assertEquals(PagePath.PAGE_ERROR, result);
 
     }
 }

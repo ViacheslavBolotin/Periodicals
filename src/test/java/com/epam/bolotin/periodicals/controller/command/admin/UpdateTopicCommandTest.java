@@ -50,6 +50,6 @@ public class UpdateTopicCommandTest {
 
         String result = command.execute(req, resp);
         Mockito.verify(topicService, Mockito.never()).update(any());
-        assertEquals(PagePath.COMMAND_REDIRECT, result);
+        assertEquals(PagePath.PAGE_ERROR, result);
     }
 }
