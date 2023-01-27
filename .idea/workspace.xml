@@ -4,29 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8d16899-1775-4faf-b2b4-05886fd7db10" name="Changes" comment="0.1.3 Add tests 42%">
+    <list default="true" id="e8d16899-1775-4faf-b2b4-05886fd7db10" name="Changes" comment="0.1.4 Add tests 42% (translation errors)">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/admin/ReportsCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/util/OutPutRowTag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/custom.tld" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin/reports.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/admin/AddPublicationCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/admin/AddPublicationCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/admin/AddTopicCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/admin/AddTopicCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/admin/BlockUnblockUserCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/admin/BlockUnblockUserCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/admin/DeletePublicationCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/admin/DeletePublicationCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/admin/DeleteTopicCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/admin/DeleteTopicCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/admin/UpdatePublicationCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/admin/UpdatePublicationCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/admin/UpdateTopicCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/admin/UpdateTopicCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/login/LoginCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/login/LoginCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/login/RegistrationCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/login/RegistrationCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/login/UpdateUserCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/login/UpdateUserCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/PagePath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/PagePath.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/CommandFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/CommandFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/resources.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/resources.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/resources_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/resources_en.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/resources_uk.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/resources_uk.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin/users.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin/users.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/error_page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/error_page.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login/new_user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login/new_user.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/bolotin/periodicals/controller/command/admin/UpdatePublicationCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/bolotin/periodicals/controller/command/admin/UpdatePublicationCommandTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/bolotin/periodicals/controller/command/admin/UpdateTopicCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/bolotin/periodicals/controller/command/admin/UpdateTopicCommandTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/bolotin/periodicals/controller/command/admin/UpdateUserCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/bolotin/periodicals/controller/command/admin/UpdateUserCommandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin/publications.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin/publications.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/_menu_admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/_menu_admin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,28 +54,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/bolotin.v/IdeaProjects/Periodicals/src/main/webapp/WEB-INF/jsp/client&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.32988507&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.gutterIcons&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "last_opened_file_path": "C:/Users/bolotin.v/IdeaProjects/Periodicals/src/main/webapp/WEB-INF/jsp/admin",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.32988507",
+    "settings.editor.selected.configurable": "editor.preferences.gutterIcons",
+    "show.migrate.to.gradle.popup": "false"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.epam.bolotin.periodicals.controller.command.admin" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\bolotin.v\IdeaProjects\Periodicals\src\main\webapp\WEB-INF\jsp\client" />
       <recent name="C:\Users\bolotin.v\IdeaProjects\Periodicals\src\main\webapp\WEB-INF\jsp\admin" />
+      <recent name="C:\Users\bolotin.v\IdeaProjects\Periodicals\src\main\webapp\WEB-INF\jsp\client" />
       <recent name="C:\Users\bolotin.v\IdeaProjects\Periodicals\src\main\webapp\WEB-INF\jsp\login" />
       <recent name="C:\Users\bolotin.v\IdeaProjects\Periodicals\src\main\webapp" />
     </key>
@@ -97,14 +90,14 @@
       <recent name="com.epam.bolotin.periodicals.model.db.repository" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.epam.bolotin.periodicals.controller.command.admin" />
       <recent name="com.epam.bolotin.periodicals.controller.command.login" />
       <recent name="com.epam.bolotin.periodicals.controller.command.client" />
-      <recent name="com.epam.bolotin.periodicals.controller.command.admin" />
       <recent name="com.epam.bolotin.periodicals.model.service" />
       <recent name="com.epam.bolotin.periodicals.model.service.implementation" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.com.epam.bolotin.periodicals in Periodicals">
+  <component name="RunManager" selected="Smart Tomcat.Periodicals">
     <configuration name="I18NCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Periodicals" />
       <extension name="coverage">
@@ -263,7 +256,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674584638597</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="0.1.4 Add tests 42% (translation errors)">
+      <created>1674753590895</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1674753590895</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -282,7 +282,8 @@
     <MESSAGE value="0.1.1" />
     <MESSAGE value="0.1.2 Add tests 34%" />
     <MESSAGE value="0.1.3 Add tests 42%" />
-    <option name="LAST_COMMIT_MESSAGE" value="0.1.3 Add tests 42%" />
+    <MESSAGE value="0.1.4 Add tests 42% (translation errors)" />
+    <option name="LAST_COMMIT_MESSAGE" value="0.1.4 Add tests 42% (translation errors)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

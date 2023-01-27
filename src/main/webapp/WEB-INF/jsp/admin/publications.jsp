@@ -201,7 +201,7 @@
 <div class="tab-pane fade show active" id="v-pills-users" role="tabpanel"
      aria-labelledby="v-pills-users-tab">
     <div class="tab-content" id="usersTabContent">
-        <%-- Список платежів --%>
+        <%-- Список пуюлікацій --%>
         <div class="tab-pane fade show active" id="users" role="tabpanel"
              aria-labelledby="internet-tab">
             <table class="table table-striped">

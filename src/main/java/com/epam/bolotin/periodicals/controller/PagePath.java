@@ -20,6 +20,7 @@ public class PagePath {
     public static final String PAGE_PUBLICATIONS = "/WEB-INF/jsp/admin/publications.jsp";
     public static final String PAGE_EDIT_PUBLICATION = "/WEB-INF/jsp/admin/edit_publication.jsp";
     public static final String PAGE_VIEW_PUBLICATION = "/WEB-INF/jsp/client/view_publication.jsp";
+    public static final String PAGE_REPORTS = "/WEB-INF/jsp/admin/reports.jsp";
 
     // common commands
     public static final String COMMAND_REDIRECT = "redirect";

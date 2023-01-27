@@ -19,6 +19,9 @@
                 <a class="nav-link" href="frontController?action=accounts"><fmt:message key="main.menu.button.accounts"/></a>
             </li>
             <li class="nav-item">
+                            <a class="nav-link" href="frontController?action=reports"><fmt:message key="main.menu.button.reports"/></a>
+            </li>
+            <li class="nav-item">
                             <a class="nav-link" href="frontController?action=user_profile"><fmt:message key="mainmenu.button.profile"/></a>
             </li>
         </ul>

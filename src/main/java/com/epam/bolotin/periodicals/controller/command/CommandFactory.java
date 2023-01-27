@@ -60,6 +60,8 @@ public class CommandFactory {
         commands.put("update_publication", new UpdatePublicationCommand());
         commands.put("delete_publication", new DeletePublicationCommand());
 
+        commands.put("reports", new ReportsCommand());
+
         // user commands
         commands.put("personal_cabinet", new PersonalCabinetCommand());
         commands.put("account", new AccountCommand());

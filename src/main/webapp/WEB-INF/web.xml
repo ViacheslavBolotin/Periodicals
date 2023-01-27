@@ -29,7 +29,6 @@
     <param-value>uk en</param-value>
   </context-param>
 
-
   <!--============================================================
    Encoding support filter
    =============================================================-->
@@ -67,7 +66,7 @@
     <filter-class>com.epam.bolotin.periodicals.controller.filter.SecurityFilter</filter-class>
     <init-param>
       <param-name>admin</param-name>
-      <param-value>users block_unblock_user accounts
+      <param-value>users block_unblock_user accounts reports
         topics add_topic edit_topic update_topic delete_topic
         publications add_publication edit_publication update_publication delete_publication</param-value>
     </init-param>
