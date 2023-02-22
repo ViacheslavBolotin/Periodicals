@@ -2,7 +2,7 @@ package com.epam.bolotin.periodicals.model.builder;
 
 import com.epam.bolotin.periodicals.model.db.DBManager;
 import com.epam.bolotin.periodicals.model.db.QueryExecuter;
-import com.epam.bolotin.periodicals.model.db.dto.PublicationDto;
+import com.epam.bolotin.periodicals.model.service.dto.PublicationDto;
 import com.epam.bolotin.periodicals.model.db.entity.Publication;
 import com.epam.bolotin.periodicals.model.db.entity.ReaderPublication;
 import org.apache.log4j.Logger;

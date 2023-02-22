@@ -1,6 +1,4 @@
-package com.epam.bolotin.periodicals.model.db.dto;
-
-import com.epam.bolotin.periodicals.model.db.entity.Account;
+package com.epam.bolotin.periodicals.model.service.dto;
 
 import java.math.BigDecimal;
 

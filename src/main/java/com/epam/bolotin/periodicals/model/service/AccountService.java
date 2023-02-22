@@ -1,12 +1,10 @@
 package com.epam.bolotin.periodicals.model.service;
 
 import com.epam.bolotin.periodicals.exception.AppException;
-import com.epam.bolotin.periodicals.exception.DBException;
-import com.epam.bolotin.periodicals.model.db.dto.AccountDto;
+import com.epam.bolotin.periodicals.model.service.dto.AccountDto;
 import com.epam.bolotin.periodicals.model.db.entity.Account;
 
 import javax.servlet.http.HttpServletRequest;
-import java.math.BigDecimal;
 import java.util.List;
 
 public interface AccountService {

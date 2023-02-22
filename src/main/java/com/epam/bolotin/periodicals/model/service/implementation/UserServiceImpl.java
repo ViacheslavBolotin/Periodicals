@@ -16,7 +16,6 @@ import java.util.List;
  */
 public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
-//    private final IAccountService accountService;
 
     /**
      * All args constructor.

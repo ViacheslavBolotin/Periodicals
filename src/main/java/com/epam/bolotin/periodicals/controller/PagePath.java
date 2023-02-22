@@ -48,6 +48,8 @@ public class PagePath {
     public static final String PAGE_PARAMETER = "page";
     public static final String TOPIC_FILTER_PARAMETER = "topic_filter";
     public static final String TITLE_FILTER_PARAMETER = "title_filter";
+    public static final String DATE_BEGIN_FILTER_PARAMETER = "date_begin";
+    public static final String DATE_END_FILTER_PARAMETER = "date_end";
 
     public static final String USER_FILTER_PARAMETER = "user_filter";
 }

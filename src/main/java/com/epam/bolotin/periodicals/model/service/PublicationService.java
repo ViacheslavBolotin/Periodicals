@@ -1,8 +1,7 @@
 package com.epam.bolotin.periodicals.model.service;
 
 import com.epam.bolotin.periodicals.exception.AppException;
-import com.epam.bolotin.periodicals.exception.DBException;
-import com.epam.bolotin.periodicals.model.db.dto.PublicationDto;
+import com.epam.bolotin.periodicals.model.service.dto.PublicationDto;
 import com.epam.bolotin.periodicals.model.db.entity.Publication;
 
 import javax.servlet.http.HttpServletRequest;

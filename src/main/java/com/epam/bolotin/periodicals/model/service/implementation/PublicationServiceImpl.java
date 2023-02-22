@@ -2,7 +2,7 @@ package com.epam.bolotin.periodicals.model.service.implementation;
 
 import com.epam.bolotin.periodicals.exception.AppException;
 import com.epam.bolotin.periodicals.model.Validator;
-import com.epam.bolotin.periodicals.model.db.dto.PublicationDto;
+import com.epam.bolotin.periodicals.model.service.dto.PublicationDto;
 import com.epam.bolotin.periodicals.model.db.entity.Publication;
 import com.epam.bolotin.periodicals.model.db.repository.AccountRepository;
 import com.epam.bolotin.periodicals.model.db.repository.PublicationRepository;

@@ -4,7 +4,7 @@ import com.epam.bolotin.periodicals.controller.PagePath;
 import com.epam.bolotin.periodicals.controller.command.Command;
 import com.epam.bolotin.periodicals.controller.util.PaginationSort;
 import com.epam.bolotin.periodicals.controller.util.RequestUtils;
-import com.epam.bolotin.periodicals.model.db.dto.AccountDto;
+import com.epam.bolotin.periodicals.model.service.dto.AccountDto;
 import com.epam.bolotin.periodicals.model.service.AccountService;
 import com.epam.bolotin.periodicals.model.service.AppServices;
 

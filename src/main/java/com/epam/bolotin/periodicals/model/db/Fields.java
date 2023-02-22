@@ -36,4 +36,8 @@ public class Fields {
     public static final String READER_PUBLICATION_PRICE = "price";
     public static final String READER_PUBLICATION_SUBSCRIBE_DATE = "subscribe_date";
 
+    //PUBLICATION report field list
+    public static final String REPORT_PUBLICATION_AMOUNT = "amount";
+    public static final String REPORT_PUBLICATION_QUANTITY = "quantity";
+
 }

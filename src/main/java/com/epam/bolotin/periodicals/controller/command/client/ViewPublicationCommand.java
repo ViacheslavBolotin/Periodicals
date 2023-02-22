@@ -2,16 +2,12 @@ package com.epam.bolotin.periodicals.controller.command.client;
 
 import com.epam.bolotin.periodicals.controller.PagePath;
 import com.epam.bolotin.periodicals.controller.command.Command;
-import com.epam.bolotin.periodicals.model.db.dto.PublicationDto;
-import com.epam.bolotin.periodicals.model.db.entity.Publication;
-import com.epam.bolotin.periodicals.model.db.entity.Topic;
+import com.epam.bolotin.periodicals.model.service.dto.PublicationDto;
 import com.epam.bolotin.periodicals.model.service.AppServices;
 import com.epam.bolotin.periodicals.model.service.PublicationService;
-import com.epam.bolotin.periodicals.model.service.TopicService;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.util.List;
 
 /**
  * @author: Viacheslav Bolotin

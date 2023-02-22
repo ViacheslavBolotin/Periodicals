@@ -1,9 +1,8 @@
 package com.epam.bolotin.periodicals.model.builder;
 
 import com.epam.bolotin.periodicals.model.db.Fields;
-import com.epam.bolotin.periodicals.model.db.dto.AccountDto;
+import com.epam.bolotin.periodicals.model.service.dto.AccountDto;
 import com.epam.bolotin.periodicals.model.db.entity.Account;
-import com.epam.bolotin.periodicals.model.db.entity.Topic;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

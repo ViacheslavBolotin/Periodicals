@@ -1,5 +1,9 @@
 package com.epam.bolotin.periodicals.controller.util;
 
+import java.sql.Timestamp;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 /**
  * @author: Viacheslav Bolotin
  * @date: 29.12.2022
@@ -14,8 +18,9 @@ public class PaginationSort {
 
     private long topicFilter;
     private String titleFilter;
-
     private long userFilter;
+    private LocalDate dateBegin;
+    private LocalDate dateEnd;
 
     private int currentPage;
     private int numberOfPages;
@@ -105,6 +110,22 @@ public class PaginationSort {
         this.userFilter = userFilter;
     }
 
+    public LocalDate getDateBegin() {
+        return dateBegin;
+    }
+
+    public void setDateBegin(LocalDate dateBegin) {
+        this.dateBegin = dateBegin;
+    }
+
+    public LocalDate getDateEnd() {
+        return dateEnd;
+    }
+
+    public void setDateEnd(LocalDate dateEnd) {
+        this.dateEnd = dateEnd;
+    }
+
     @Override
     public String toString() {
         return "PaginationSort{" +
@@ -131,10 +152,11 @@ public class PaginationSort {
             currentPage = numberOfPages;
         }
         prevPage = currentPage - 1;
-        if (prevPage == 0) prevPage = 1;
+        if (prevPage <= 0) prevPage = 1;
         nextPage = currentPage + 1;
         if (prevPage > numberOfPages) prevPage = numberOfPages;
         startFrom = (long) (currentPage - 1) * MAX_ITEM_ON_PAGE;
+        if (startFrom <= 0) startFrom = 0;
 
         //Sorting
         if (sortType == null) {

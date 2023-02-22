@@ -6,7 +6,7 @@ import com.epam.bolotin.periodicals.model.builder.PublicationQueryBuilder;
 import com.epam.bolotin.periodicals.model.db.DBManager;
 import com.epam.bolotin.periodicals.model.db.Fields;
 import com.epam.bolotin.periodicals.model.db.QueryExecuter;
-import com.epam.bolotin.periodicals.model.db.dto.PublicationDto;
+import com.epam.bolotin.periodicals.model.service.dto.PublicationDto;
 import com.epam.bolotin.periodicals.model.db.entity.Publication;
 import com.epam.bolotin.periodicals.model.db.entity.ReaderPublication;
 import com.epam.bolotin.periodicals.model.db.repository.AccountRepository;
