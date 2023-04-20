@@ -21,7 +21,8 @@
 <div class="row">
 
     <div class="dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button class="btn btn-primary dropdown-toggle" type="button"
+            id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <fmt:message key="payment.sort"/>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -49,6 +50,7 @@
     <div class="form-group">
 
         <label for="publication_topic"> <fmt:message key="publication.th.topic"/> </label>
+        <p style="margin-left: 5px"> </p>
 
             <select name="topic_filter" id="topic_filter" class="form-control" width = "150">
                 <option value=""> <fmt:message key="publication.all_topic"/> </option>
@@ -65,16 +67,19 @@
                 </c:forEach>
             </select>
 
+        <p style="margin-left: 5px"> </p>
         <label for="publication_title"> <fmt:message key="publication.th.name"/> </label>
+        <p style="margin-left: 5px"> </p>
         <input type="text" class="form-control" id="title_filter" name="title_filter" value="${ps.titleFilter}"
                 minlength="1" maxlength="255">
 
+        <p style="margin-left: 15px"> </p>
         <button type="submit" class="btn btn-dark"> <fmt:message key="publication.filter"/> </button>
 
     </div>
 </form>
 
-<div class="col"></div>
+
 
     <c:if test="${sessionScope.userRole.getName().equals('admin')}">
 
@@ -184,9 +189,6 @@
  </div>
 
 
-
-
-
 </div>
 
 </c:if>
@@ -232,8 +234,11 @@
                         <td>${publication.price}</td>
 
                         <c:if test="${sessionScope.userRole.getName().equals('admin')}">
-                            <td> <a href="frontController?action=edit_publication&publicationId=${publication.id}"> <fmt:message key="publication.th.edit"/> </a> </td>
-                            <td> <a href="frontController?action=delete_publication&publicationId=${publication.id}" style="color:#ff0000"> <fmt:message key="publication.th.delete"/> </a> </td>
+                            <td> <a href="frontController?action=edit_publication&publicationId=${publication.id}">
+                                    <fmt:message key="publication.th.edit"/> </a> </td>
+                            <td> <a href="frontController?action=delete_publication&publicationId=${publication.id}"
+                                    style="color:#ff0000">
+                                    <fmt:message key="publication.th.delete"/> </a> </td>
                         </c:if>
 
                         <c:if test="${!sessionScope.userRole.getName().equals('admin') && sessionScope.user != null}">

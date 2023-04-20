@@ -4,51 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8d16899-1775-4faf-b2b4-05886fd7db10" name="Changes" comment="0.1.5 Add tests 42% (add custom tag)">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/model/builder/DtoBilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/model/builder/RecordReportPublicationBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/model/builder/ReportQueryBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/model/db/ReportQueryExecuter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/model/db/entity/RecordReportPublication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/model/db/repository/ReportPublicationRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/model/db/repository/mysql/ReportPublicationRepositoryMySql.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/model/service/ReportService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/model/service/dto/RecordReportPublicationDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/model/service/implementation/ReportServiceImpl.java" afterDir="false" />
+    <list default="true" id="e8d16899-1775-4faf-b2b4-05886fd7db10" name="Changes" comment="0.1.5 Add tests 42% (add custom tag) add report">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/admin/ExportToPdfCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/model/ReportBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/FrontController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/FrontController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/PagePath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/PagePath.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/admin/AccountsCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/admin/AccountsCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/admin/PublicationsCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/admin/PublicationsCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/admin/ReportsCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/admin/ReportsCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/client/PersonalCabinetCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/client/PersonalCabinetCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/client/ViewPublicationCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/client/ViewPublicationCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/util/OutPutRowTag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/util/OutPutRowTag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/util/PaginationSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/util/PaginationSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/util/RequestUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/util/RequestUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/model/builder/AccountBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/model/builder/AccountBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/model/builder/AccountQueryBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/model/builder/AccountQueryBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/model/builder/PublicationBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/model/builder/PublicationBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/model/builder/PublicationQueryBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/model/builder/PublicationQueryBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/model/db/Fields.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/model/db/Fields.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/model/db/dto/AccountDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/model/service/dto/AccountDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/model/db/dto/PublicationDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/model/service/dto/PublicationDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/model/db/repository/AccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/model/db/repository/AccountRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/model/db/repository/PublicationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/model/db/repository/PublicationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/model/db/repository/mysql/AccountRepositoryMySql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/model/db/repository/mysql/AccountRepositoryMySql.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/model/db/repository/mysql/PublicationRepositoryMySql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/model/db/repository/mysql/PublicationRepositoryMySql.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/model/service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/model/service/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/CommandFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/controller/command/CommandFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/model/service/AppServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/model/service/AppServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/model/service/PublicationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/model/service/PublicationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/model/service/implementation/AccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/model/service/implementation/AccountServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/model/service/implementation/PublicationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/model/service/implementation/PublicationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/model/service/implementation/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/bolotin/periodicals/model/service/implementation/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/resources.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/resources.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/resources_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/resources_en.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/resources_uk.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/resources_uk.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/custom.tld" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/custom.tld" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin/publications.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin/publications.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin/reports.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin/reports.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/client/userPublications.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/client/userPublications.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,11 +62,11 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/bolotin.v/IdeaProjects/Periodicals/src/main/webapp/WEB-INF/jsp/admin&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Slava/JAVA/IdeaProjects/IdeaProjects/PaymentsSpring&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.32988507&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.gutterIcons&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
 }</component>
@@ -116,6 +88,9 @@
       <recent name="C:\Users\bolotin.v\IdeaProjects\Periodicals\src\main\webapp" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.epam.bolotin.periodicals.model" />
+      <recent name="com.epam.bolotin.periodicals" />
+      <recent name="com.epam.bolotin.periodicals.controller.command.admin" />
       <recent name="com.epam.bolotin.periodicals.model.db.repository" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -170,7 +145,7 @@
       <module name="Periodicals" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.epam.bolotin.periodicals.*" />
+          <option name="PATTERN" value="com.epam.bolotin.periodicals.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -186,7 +161,7 @@
       <module name="Periodicals" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.epam.bolotin.periodicals.*" />
+          <option name="PATTERN" value="com.epam.bolotin.periodicals.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -292,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674832544250</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="0.1.5 Add tests 42% (add custom tag) add report">
+      <created>1677073229419</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1677073229434</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -313,7 +295,8 @@
     <MESSAGE value="0.1.3 Add tests 42%" />
     <MESSAGE value="0.1.4 Add tests 42% (translation errors)" />
     <MESSAGE value="0.1.5 Add tests 42% (add custom tag)" />
-    <option name="LAST_COMMIT_MESSAGE" value="0.1.5 Add tests 42% (add custom tag)" />
+    <MESSAGE value="0.1.5 Add tests 42% (add custom tag) add report" />
+    <option name="LAST_COMMIT_MESSAGE" value="0.1.5 Add tests 42% (add custom tag) add report" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -339,6 +322,10 @@
         <watch expression="dateBegin.toLocalDate()" language="JAVA" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Periodicals$AccountsCommandTest.ic" NAME="AccountsCommandTest Coverage Results" MODIFIED="1674579193041" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

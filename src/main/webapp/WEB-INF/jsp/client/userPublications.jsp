@@ -35,12 +35,13 @@
         </div>
     </div>
 
-<div class="col">
 
+<p style="margin-left: 5px"> </p>
 <form class="form-inline" method="post" action="frontController?action=personal_cabinet">
     <div class="form-group">
 
         <label for="publication_topic"> <fmt:message key="publication.th.topic"/> </label>
+        <p style="margin-left: 5px"> </p>
 
             <select name="topic_filter" id="topic_filter" class="form-control" width = "150">
                 <option value=""> <fmt:message key="publication.all_topic"/> </option>
@@ -57,22 +58,27 @@
                 </c:forEach>
             </select>
 
+        <p style="margin-left: 5px"> </p>
         <label for="publication_title"> <fmt:message key="publication.th.name"/> </label>
+        <p style="margin-left: 5px"> </p>
         <input type="text" class="form-control" id="title_filter" name="title_filter" value="${ps.titleFilter}"
                 minlength="1" maxlength="255">
 
+        <p style="margin-left: 15px"> </p>
         <button type="submit" class="btn btn-dark"> <fmt:message key="publication.filter"/> </button>
 
     </div>
 </form>
 
-<div class="col"></div>
+</div>
 
     <c:if test="${not empty errorMessage}">
         <h5 style="color:#ff0000"> ${errorMessage}</h5>
     </c:if>
 
 <%-- Publication--%>
+
+<p style="margin-left: 5px"> </p>
 
 <div class="tab-pane fade show active" id="v-pills-users" role="tabpanel"
      aria-labelledby="v-pills-users-tab">

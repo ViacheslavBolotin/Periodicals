@@ -61,6 +61,7 @@ public class CommandFactory {
         commands.put("delete_publication", new DeletePublicationCommand());
 
         commands.put("reports", new ReportsCommand());
+        commands.put("export_to_pdf", new ExportToPdfCommand());
 
         // user commands
         commands.put("personal_cabinet", new PersonalCabinetCommand());

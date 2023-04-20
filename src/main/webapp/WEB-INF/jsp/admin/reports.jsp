@@ -42,28 +42,39 @@
         </div>
     </div>
 
+    <p style="margin-left: 40px"> </p>
 
+    <form class="form-inline" method="post" action="frontController?action=export_to_pdf">
+        <button type="submit" margin-left: 40px> <fmt:message key="report.export_to_pdf"/> </button>
+    </form>
+
+
+</div>
+<div class="row">
 
 <form class="form-inline" method="post" action="frontController?action=reports">
     <div class="form-group">
 
 
-        <label for="date_begin">Date begin:</label>
+        <label for="date_begin"> <fmt:message key="report.date_begin"/> </label>
+        <p style="margin-left: 5px"> </p>
         <input type="date" id="date_begin" name="date_begin"
            min="2020-01-01T00:00" value = ${ps.dateBegin} required />
 
-        <label for="date_end">Date end:</label>
+        <p style="margin-left: 5px"> </p>
+        <label for="date_end"> <fmt:message key="report.date_end"/> </label>
+        <p style="margin-left: 5px"> </p>
         <input type="date" id="date_end" name="date_end"
             min="2020-01-01T00:00" value = "" required />
 
         <script type="text/javascript">
-
             const dateControlEnd = document.querySelector('input[id="date_end"]');
             dateControlEnd.value = new Date().toJSON().slice(0,10);
         </script>
 
-
+        <p style="margin-left: 5px"> </p>
         <label for="publication_topic"> <fmt:message key="publication.th.topic"/> </label>
+        <p style="margin-left: 5px"> </p>
 
             <select name="topic_filter" id="topic_filter" class="form-control" width = "150">
                 <option value=""> <fmt:message key="publication.all_topic"/> </option>
@@ -80,20 +91,17 @@
                 </c:forEach>
             </select>
 
+        <p style="margin-left: 5px"> </p>
         <label for="publication_title"> <fmt:message key="publication.th.name"/> </label>
+        <p style="margin-left: 5px"> </p>
         <input type="text" class="form-control" id="title_filter" name="title_filter" value="${ps.titleFilter}"
                 minlength="1" maxlength="255">
 
+        <p style="margin-left: 5px"> </p>
         <button type="submit" class="btn btn-dark"> <fmt:message key="publication.filter"/> </button>
 
     </div>
 </form>
-
-
-
-
-
-
 
 
 </div>
@@ -103,6 +111,8 @@
     </c:if>
 
 <%-- Reports--%>
+
+<div class="row"> <p style="margin-left: 5px"> </p> </div>
 
 <div class="tab-pane fade show active" id="v-pills-users" role="tabpanel"
      aria-labelledby="v-pills-users-tab">
@@ -171,37 +181,6 @@
     </nav>
 
 </div>
-
-<%--
-<table border="1" rules="groups" width="500" cellpadding="3" cellspacing="0">
-<caption><b>Энергетическая ценность продуктов питания:</b></caption>
-<thead bgcolor ="#deb887" title="Шапка">
-<tr>
-<th>Продукт</th><th>Белки</th><th>Жиры</th><th>Углеводы</th><th>ккал</th>
-</tr>
-</thead>
-<tbody align="left" bgcolor ="#faebd7" title="Энергетическая ценность продуктов питания">
-<tr>
-<th>Хлеб ржаной</th><td>4,7</td><td>0,7</td><td>49,8</td><td>214</td>
-</tr>
-<tr>
-<th>Молоко</th><td>2,8</td><td>3,2</td><td>4,7</td><td>58</td>
-</tr>
-<tr>
-<td class="table-primary"> Картофель</td><td class="table-primary">2</td><td>0,1</td><td>19,7</td><td>83</td>
-</tr>
-<tr>
-<th>Свинина</th><td>11,4</td><td>49,3</td><td>9</td><td>489</td>
-</tr>
-</tbody>
-<tfoot align="left" bgcolor ="#f5f5dc" title="Итого:">
-<tr>
-<th>Итого:</th><td>20,9</td><td>53,3</td><td>83,2</td><td>844</td>
-</tr>
-</tfoot>
-</table>
-
---%>
 
 <jsp:include page="/WEB-INF/templates/_scripts.jsp"></jsp:include>
 </body>

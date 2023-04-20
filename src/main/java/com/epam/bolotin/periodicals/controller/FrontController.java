@@ -55,8 +55,8 @@ public class FrontController extends HttpServlet {
             }
 
         } catch (Exception e) {
-//            request.setAttribute("errorMessage", "Server error! Try later!");
-            request.setAttribute("errorMessage", e.getMessage());
+            request.setAttribute("errorMessage", "error.page.server_error");
+//            request.setAttribute("errorMessage", e.getMessage());
             try {
                 request.getRequestDispatcher(PagePath.PAGE_ERROR).forward(request, response);
             } catch (Exception ex) {

@@ -30,10 +30,9 @@ public class PagePath {
 
     // admin commands
     public static final String COMMAND_SHOW_USERS = "frontController?action=users";
-    public static final String COMMAND_SHOW_ACCOUNTS = "frontController?action=accounts";
     public static final String COMMAND_TOPICS = "frontController?action=topics";
     public static final String COMMAND_PUBLICATIONS = "frontController?action=publications";
-//    public static final String COMMAND_PROFILE = "frontController?action=profile";
+    public static final String COMMAND_REPORTS = "frontController?action=reports";
 
     // client commands
     public static final String COMMAND_PERSONAL_CABINET = "frontController?action=personal_cabinet";
@@ -51,5 +50,4 @@ public class PagePath {
     public static final String DATE_BEGIN_FILTER_PARAMETER = "date_begin";
     public static final String DATE_END_FILTER_PARAMETER = "date_end";
 
-    public static final String USER_FILTER_PARAMETER = "user_filter";
 }

@@ -1,5 +1,6 @@
 package com.epam.bolotin.periodicals.model.service;
 
+import com.epam.bolotin.periodicals.model.ReportBuilder;
 import com.epam.bolotin.periodicals.model.db.repository.*;
 import com.epam.bolotin.periodicals.model.db.repository.mysql.*;
 import com.epam.bolotin.periodicals.model.service.implementation.*;
@@ -20,6 +21,7 @@ public class AppServices {
     private final PublicationService publicationService = new PublicationServiceImpl(publicationRepository, accountRepository);
     private final ReportPublicationRepository reportPublicationRepository = new ReportPublicationRepositoryMySql();
     private final ReportService reportService = new ReportServiceImpl(reportPublicationRepository);
+    private final ReportBuilder reportBuilder = new ReportBuilder();
 
     public static AppServices getInstance() {
         return appServices;
@@ -39,4 +41,5 @@ public class AppServices {
     public ReportService getReportService() {
         return reportService;
     }
+    public ReportBuilder getReportBuilder() {return reportBuilder;}
 }

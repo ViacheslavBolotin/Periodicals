@@ -23,12 +23,12 @@
   </properties>
 
   <dependencies>
-    <!--    <dependency>
-          <groupId>junit</groupId>
-          <artifactId>junit</artifactId>
-          <version>4.11</version>
-          <scope>test</scope>
-        </dependency> -->
+
+    <dependency>
+      <groupId>com.itextpdf</groupId>
+      <artifactId>itextpdf</artifactId>
+      <version>5.3.0</version>
+    </dependency>
 
     <dependency>
       <groupId>org.junit.jupiter</groupId>
@@ -58,8 +58,7 @@
       <scope>test</scope>
     </dependency>
 
-        <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
-
+    <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
