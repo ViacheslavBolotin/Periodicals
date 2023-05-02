@@ -25,7 +25,7 @@ public class SubscribePublicationCommand implements Command {
 
         String resp;
         long publicationId = 0;
-        String errorMessage = "Cannot subscribe this publication!";
+        String errorMessage = "error.SubscribePublication.cannot_subscribe";
 
         try {
 
@@ -48,8 +48,8 @@ public class SubscribePublicationCommand implements Command {
 
             } else {
 
-                if (result == -1) {errorMessage = "You are already subscribed to this publication!";}
-                if (result == -2) {errorMessage = "You do not have enough funds in your account to subscribe to this publication!";}
+                if (result == -1) {errorMessage = "error.SubscribePublication.already_subscribed";}
+                if (result == -2) {errorMessage = "error.SubscribePublication.funds";}
 
                 if (result < 0) {
                     request.setAttribute("errorMessage", errorMessage);

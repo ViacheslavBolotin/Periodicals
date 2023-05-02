@@ -2,21 +2,14 @@ package com.epam.bolotin.periodicals.controller;
 
 import com.epam.bolotin.periodicals.controller.command.Command;
 import com.epam.bolotin.periodicals.controller.command.CommandFactory;
-import com.epam.bolotin.periodicals.model.db.DBManager;
-import com.epam.bolotin.periodicals.model.db.Fields;
 import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
 
 import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.sql.*;
 
 @WebServlet("/frontController")
 public class FrontController extends HttpServlet {
@@ -56,7 +49,6 @@ public class FrontController extends HttpServlet {
 
         } catch (Exception e) {
             request.setAttribute("errorMessage", "error.page.server_error");
-//            request.setAttribute("errorMessage", e.getMessage());
             try {
                 request.getRequestDispatcher(PagePath.PAGE_ERROR).forward(request, response);
             } catch (Exception ex) {

@@ -7,11 +7,8 @@ import com.epam.bolotin.periodicals.model.db.Fields;
 import com.epam.bolotin.periodicals.model.db.ReportQueryExecuter;
 import com.epam.bolotin.periodicals.model.db.entity.RecordReportPublication;
 import com.epam.bolotin.periodicals.model.db.repository.ReportPublicationRepository;
-import com.epam.bolotin.periodicals.model.service.dto.RecordReportPublicationDto;
 
-import java.sql.Timestamp;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.List;
 
 /**
