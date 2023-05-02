@@ -20,6 +20,8 @@ The system administrator has the rights:<br/>
 	- blocking / unblocking- the user.
 
 
+https://github.com/ViacheslavBolotin/Periodicals
+
 ### Details about the database
 
 *Connection string for database is in the properties file `db.properties` using the key `connection.url`. 

@@ -28,8 +28,6 @@ u
 Esrc/main/java/com/epam/bolotin/periodicals/exception/DBException.java,f\3\f3d6ff99e14197725f69eadc066d45eebbedfeb0
 Å
 Qsrc/main/java/com/epam/bolotin/periodicals/model/db/entity/ReaderPublication.java,b\5\b5b917177c1acd1675a97e52fc2aec4bad3fb539
-9
-	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 É
 Ssrc/main/java/com/epam/bolotin/periodicals/model/db/repository/TopicRepository.java,5\6\5607a62b0fb49ddb00ee0dc696da39b59b964d4d
 x
